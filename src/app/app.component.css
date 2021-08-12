@@ -1,0 +1,41 @@
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+}
+
+::ng-deep.mat-tab-label,
+::ng-deep.mat-tab-label-active {
+  min-width: 0 !important;
+  padding: 3px !important;
+  margin: 3px !important;
+}
+
+::ng-deep.mat-form-field-flex {
+  padding: 13px;
+}
+
+button {
+  margin-right: 10px;
+}
+
+.updateForm {
+  display: none;
+}
+
+.actionSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.search {
+  align-items: right;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}

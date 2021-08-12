@@ -13,19 +13,19 @@ export class CountryService {
     constructor(private http: HttpClient){}
 
     public getCountry(): Observable<Country[]>{
-        return this.http.get<Country[]>(`${this.apiServerUrl}/api/v2/all`);
+        return this.http.get<Country[]>(`${this.apiServerUrl}/rest/v2/all`);
     }
 
     public addCountry(country: Country): Observable<Country>{
-      return this.http.post<Country>(`${this.apiServerUrl}/api/v2/add`,country);
+      return this.http.post<Country>(`${this.apiServerUrl}/rest/v2/add`,country);
     }
 
-    public updateCountry(country: Country): Observable<Country>{
-      return this.http.put<Country>(`${this.apiServerUrl}/api/v2/update`,country);
+    public updateCountry(country: Country, countryId: number): Observable<Country>{
+      return this.http.put<Country>(`${this.apiServerUrl}/rest/v2/update/${countryId}`,country);
     }
 
     public deleteCountry(countryId: number): Observable<void>{
-      return this.http.delete<void>(`${this.apiServerUrl}/api/v2/delete/${countryId}`);
+      return this.http.delete<void>(`${this.apiServerUrl}/rest/v2/delete/${countryId}`);
     }
 }
 
